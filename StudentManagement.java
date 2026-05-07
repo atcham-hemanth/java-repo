@@ -2,6 +2,12 @@ public class StudentManagement {
 
     public static void main(String[] args) {
 
+        if (args.length < 5) {
+            System.out.println("Usage:");
+            System.out.println("java StudentManagement <name> <id> <math> <science> <english>");
+            return;
+        }
+
         System.out.println("===== Student Management System =====");
 
         String name = args[0];
@@ -15,10 +21,14 @@ public class StudentManagement {
 
         String grade;
 
-        if (average >= 90) grade = "A";
-        else if (average >= 75) grade = "B";
-        else if (average >= 50) grade = "C";
-        else grade = "Fail";
+        if (average >= 90)
+            grade = "A";
+        else if (average >= 75)
+            grade = "B";
+        else if (average >= 50)
+            grade = "C";
+        else
+            grade = "Fail";
 
         System.out.println("Name: " + name);
         System.out.println("ID: " + id);
@@ -29,7 +39,5 @@ public class StudentManagement {
         System.out.println("Program Completed!");
     }
 }
-
-
 
 
