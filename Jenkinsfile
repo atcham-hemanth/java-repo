@@ -15,6 +15,18 @@ pipeline {
             }
         }
 
+        stage('Run') {
+
+            steps {
+
+                echo 'Running Java Program'
+
+                sh 'java HelloWorld'
+
+            }
+        }
+
     }
 }
+
 
